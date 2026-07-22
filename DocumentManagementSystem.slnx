@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DocumentManagementSystem.Api/DocumentManagementSystem.Api.csproj" />
+    <Project Path="src/DocumentManagementSystem.Application/DocumentManagementSystem.Application.csproj" />
+    <Project Path="src/DocumentManagementSystem.Contracts/DocumentManagementSystem.Contracts.csproj" />
+    <Project Path="src/DocumentManagementSystem.Domain/DocumentManagementSystem.Domain.csproj" />
+    <Project Path="src/DocumentManagementSystem.Infrastructure/DocumentManagementSystem.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DocumentManagementSystem.Api.IntegrationTests/DocumentManagementSystem.Api.IntegrationTests.csproj" />
+    <Project Path="tests/DocumentManagementSystem.Application.Tests/DocumentManagementSystem.Application.Tests.csproj" />
+    <Project Path="tests/DocumentManagementSystem.Domain.Tests/DocumentManagementSystem.Domain.Tests.csproj" />
+    <Project Path="tests/DocumentManagementSystem.Infrastructure.Tests/DocumentManagementSystem.Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,170 @@
+```ini
+# Top-most EditorConfig file
+root = true
+
+############################################################
+# Global Settings
+############################################################
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+############################################################
+# C#
+############################################################
+
+[*.cs]
+
+##########################
+# Formatting
+##########################
+
+indent_size = 4
+
+csharp_new_line_before_open_brace = all
+
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_labels = one_less_than_current
+
+##########################
+# var preferences
+##########################
+
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = false:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+##########################
+# Expression-bodied members
+##########################
+
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
+csharp_style_expression_bodied_operators = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+
+##########################
+# Pattern matching
+##########################
+
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+
+##########################
+# Null checking
+##########################
+
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+
+##########################
+# this.
+##########################
+
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+##########################
+# readonly
+##########################
+
+dotnet_style_readonly_field = true:suggestion
+
+##########################
+# object creation
+##########################
+
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_collection_initializer = true:suggestion
+
+##########################
+# Braces
+##########################
+
+csharp_prefer_braces = true:warning
+
+##########################
+# Namespaces
+##########################
+
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+##########################
+# Modifier ordering
+##########################
+
+csharp_preferred_modifier_order = public,private,protected,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,required,volatile,async:suggestion
+
+##########################
+# Parentheses
+##########################
+
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:suggestion
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:suggestion
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:suggestion
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:suggestion
+
+##########################
+# Naming Rules
+##########################
+
+dotnet_naming_rule.interfaces_should_begin_with_i.severity = suggestion
+dotnet_naming_rule.interfaces_should_begin_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_begin_with_i.style = begins_with_i
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+############################################################
+# XML Documentation
+############################################################
+
+dotnet_diagnostic.CS1591.severity = none
+
+############################################################
+# Analyzer Severity
+############################################################
+
+dotnet_analyzer_diagnostic.category-Style.severity = suggestion
+dotnet_analyzer_diagnostic.category-Performance.severity = suggestion
+dotnet_analyzer_diagnostic.category-Reliability.severity = warning
+dotnet_analyzer_diagnostic.category-Security.severity = warning
+
+############################################################
+# JSON
+############################################################
+
+[*.json]
+indent_size = 2
+
+############################################################
+# XML
+############################################################
+
+[*.{xml,csproj,props,targets}]
+indent_size = 2
+
+############################################################
+# Markdown
+############################################################
+
+[*.md]
+trim_trailing_whitespace = false
+
+############################################################
+# YAML
+############################################################
+
+[*.{yml,yaml}]
+indent_size = 2
+```

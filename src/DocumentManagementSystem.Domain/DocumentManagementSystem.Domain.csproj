@@ -10,7 +10,6 @@
     <Folder Include="Documents\Entities\" />
     <Folder Include="Documents\Interfaces\" />
     <Folder Include="Documents\Exceptions\" />
-    <Folder Include="Documents\ValueObjects\" />
   </ItemGroup>
 
 </Project>

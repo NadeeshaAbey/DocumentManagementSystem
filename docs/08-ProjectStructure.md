@@ -131,8 +131,6 @@ Contains the business model.
 - Entities
 - Value Objects
 - Domain exceptions
-- Repository abstractions
-- Storage abstractions
 - Business rules
 
 ### Depends On
@@ -227,8 +225,11 @@ Documents/
 │       ├── GetDocumentsQuery.cs
 │       └── GetDocumentsQueryHandler.cs
 │
-└── DTOs/
-    └── DocumentDto.cs
+├──DTOs/
+│   └── DocumentDto.cs
+└── Interfaces/
+    ├──IDocumentRepository.cs
+    └──IFileStorage
 
 Common/
 ├── Behaviors/
@@ -254,12 +255,6 @@ ValueObjects/
 │   ├── FileSize.cs
 │   ├── ContentType.cs
 │   └── StorageKey.cs
-
-Repositories/
-│   └── IDocumentRepository.cs
-
-Storage/
-│   └── IFileStorage.cs
 
 Exceptions/
 ```

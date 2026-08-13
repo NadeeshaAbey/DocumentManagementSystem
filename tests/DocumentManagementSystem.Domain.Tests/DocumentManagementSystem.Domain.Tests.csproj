@@ -13,7 +13,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
-    <PackageVersion Include="FluentAssertions" />
   </ItemGroup>
 
   <ItemGroup>

@@ -174,3 +174,4 @@ copilot/
 *.bak
 *.orig
 ```
+/src/DocumentManagementSystem.Api/appsettings.json

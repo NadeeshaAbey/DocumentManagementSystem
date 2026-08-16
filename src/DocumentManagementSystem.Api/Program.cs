@@ -10,7 +10,18 @@ if (string.IsNullOrWhiteSpace(connectionString))
         "Database connection string 'DefaultConnection' was not found.");
 }
 
-builder.Services.AddInfrastructure(connectionString);
+var storageRoot = Path.Combine(
+    builder.Environment.ContentRootPath,
+    "..",
+    "..",
+    "..",
+    "..",
+    "storage",
+    "documents");
+
+builder.Services.AddInfrastructure(
+    connectionString,
+    storageRoot);
 
 builder.Services.AddControllers();
 

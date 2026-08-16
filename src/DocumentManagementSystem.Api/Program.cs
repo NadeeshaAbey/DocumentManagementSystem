@@ -10,14 +10,22 @@ if (string.IsNullOrWhiteSpace(connectionString))
         "Database connection string 'DefaultConnection' was not found.");
 }
 
-var storageRoot = Path.Combine(
-    builder.Environment.ContentRootPath,
-    "..",
-    "..",
-    "..",
-    "..",
-    "storage",
-    "documents");
+var storageRoot = builder.Configuration["Storage:RootPath"];
+
+if (string.IsNullOrWhiteSpace(storageRoot))
+{
+    throw new InvalidOperationException(
+        "Storage root path 'Storage:RootPath' was not found.");
+}
+
+var repositoryRoot = Path.GetFullPath(
+    Path.Combine(
+        builder.Environment.ContentRootPath,
+        "..",
+        ".."));
+
+storageRoot = Path.GetFullPath(
+    Path.Combine(repositoryRoot, storageRoot));
 
 builder.Services.AddInfrastructure(
     connectionString,
